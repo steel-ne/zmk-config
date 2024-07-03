@@ -14,7 +14,7 @@
 #define RSE 2
 #define ADJ 3
 
-&mt { quick-tap-ms = <50>; };
+&mt { quick-tap-ms = <100>; };
 
 / {
     keymap {
