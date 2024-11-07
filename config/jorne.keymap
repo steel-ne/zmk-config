@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define DEF 0
@@ -33,7 +34,7 @@
 &mo 1  &kp Y  &kp U  &kp I      &kp O    &kp P      &none    &kp Y        &kp U           &kp I        &kp O    &kp P     &kp LBKT       &mt RWIN RBKT
        &kp H  &kp J  &kp K      &kp L    &kp SEMI   &none    &kp H        &kp J           &kp K        &kp L    &kp SEMI  &mt RCTRL SQT
        &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &none    &kp N        &kp M           &kp COMMA    &kp DOT  &kp FSLH  &kp BSLH
-                                &mo RSE  &mo 3      &none    &lt LWR ESC  &mt RSHFT BSPC  &lt RSE DEL
+                                &to RSE  &mo 3      &none    &lt LWR ESC  &mt RSHFT BSPC  &lt RSE DEL
             >;
         };
 
@@ -60,10 +61,10 @@
             //                          |     |     | ADJ |   | ADJ |     |     |
 
             bindings = <
-&trans  &kp KP_NUM       &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp UP     &kp PG_UP  &kp SLCK   &kp CAPS         &trans
-        &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp DOWN   &kp RIGHT  &kp UNDER  &mt RCTRL K_APP
-        &trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp PSCRN  &kp PG_DN  &kp INS    &trans
-                                                     &trans     &trans     &lt ADJ RET     &lt ADJ ESC   &trans    &trans
+&kp KP_NUMLOCK  &kp KP_SLASH     &kp KP_N7        &kp KP_NUMBER_8  &kp KP_N9  &kp KP_MINUS  &none    &kp C_VOL_UP  &kp HOME  &kp UP     &kp PG_UP  &kp SLCK   &kp CAPS         &trans
+                &kp KP_MULTIPLY  &kp KP_NUMBER_4  &kp KP_N4        &kp KP_N6  &kp KP_PLUS   &none    &kp C_MUTE    &kp LEFT  &kp DOWN   &kp RIGHT  &kp UNDER  &mt RCTRL K_APP
+                &kp KP_N0        &kp KP_N1        &kp KP_N2        &kp KP_N3  &kp KP_DOT    &none    &kp C_VOL_DN  &kp END   &kp PSCRN  &kp PG_DN  &kp INS    &trans
+                                                                   &to 0      &none         &none    &lt ADJ ESC   &trans    &trans
             >;
         };
 
@@ -75,7 +76,7 @@
             //                          |     |     |     |   |     |     |     |
 
             bindings = <
-&bootloader  &bt BT_CLR       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFR                    &rgb_ug RGB_EFF                    &none     &bt BT_SEL 4     &bt BT_SEL 3     &bt BT_SEL 2     &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR  &bootloader
+&bootloader  &out OUT_TOG     &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFR                    &rgb_ug RGB_EFF                    &none     &bt BT_SEL 4     &bt BT_SEL 3     &bt BT_SEL 2     &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR  &bootloader
              &rgb_ug RGB_ON   &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_SPD                    &rgb_ug RGB_SPI                    &none     &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &bt BT_SEL 1  &none         &none
              &rgb_ug RGB_OFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_COLOR_HSB(120,100,50)  &rgb_ug RGB_COLOR_HSB(237,100,50)  &none     &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &none         &none         &none
                                                                 &none                              &none                              &trans    &trans           &none            &trans
