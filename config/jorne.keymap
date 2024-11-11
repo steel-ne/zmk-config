@@ -14,6 +14,10 @@
 #define RSE 2
 #define ADJ 3
 
+&mt { quick-tap-ms = <200>; };
+
+&lt { quick-tap-ms = <200>; };
+
 / {
     behaviors {
         hml: homewrow_mods_left {
