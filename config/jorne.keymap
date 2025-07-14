@@ -48,12 +48,12 @@
     combos {
         compatible = "zmk,combos";
 
-        CS-C {
+        CS_C {
             bindings = <&kp LC(RS(C))>;
             key-positions = <4 3>;
         };
 
-        CS-V {
+        CS_V {
             bindings = <&kp LC(RS(V))>;
             key-positions = <5 4>;
         };
