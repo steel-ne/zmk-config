@@ -50,12 +50,12 @@
 
         CS_C {
             bindings = <&kp LC(RS(C))>;
-            key-positions = <4 3>;
+            key-positions = <4 1>;
         };
 
         CS_V {
             bindings = <&kp LC(RS(V))>;
-            key-positions = <5 4>;
+            key-positions = <5 1>;
         };
     };
 
