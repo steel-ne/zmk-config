@@ -49,12 +49,12 @@
         compatible = "zmk,combos";
 
         CS_C {
-            bindings = <&kp LC(RS(C))>;
+            bindings = <&kp LC(INSERT)>;
             key-positions = <4 2>;
         };
 
         CS_V {
-            bindings = <&kp LC(RS(V))>;
+            bindings = <&kp RS(INSERT)>;
             key-positions = <5 2>;
         };
     };
