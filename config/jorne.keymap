@@ -59,6 +59,15 @@
         };
     };
 
+    macros {
+        pass: pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp O &kp O &kp T &kp ENTER &kp W &kp E &kp L &kp C &kp O &kp M &kp E &kp MINUS &kp T &kp O &kp MINUS &kp A &kp J &kp A &kp X &kp ENTER>;
+            label = "PASS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -135,10 +144,10 @@
 
         Braces {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACE          &kp RIGHT_BRACE        &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &kp LBKT                &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans                  &trans                 &trans  &trans
+&trans  &trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACE          &kp RIGHT_BRACE        &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &pass   &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LBKT                &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans  &trans
+                                &trans                &trans                 &trans                  &trans                 &trans  &trans
             >;
         };
     };
